@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito botão</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="btn" data-tooltip="Tamanho máximo 25MB">
+            <div class="btn-box">
+                <div class="text">Download</div>
+                <span class="icon">
+                    <i class="fa-solid fa-download"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a342c01441.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        width: 144px;
+        height: 48px;
+        background-color: #ffc412;
+        position: relative;
+        text-align: center;
+        border-radius: 0.45em;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .btn::before {
+        position: absolute;
+        content: attr(data-tooltip);
+        width: 220px;
+        height: 36px;
+        background-color: white;
+        font-size: 0.9rem;
+        color: black;
+        border-radius: 0.25em;
+        line-height: 35px;
+        bottom: 94px;
+        left: calc(50% - 220px / 2);
+    }
+
+    .btn::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: white;
+        left: calc(50% - 10px);
+        bottom: 74px;
+    }
+
+    .btn::after,
+    .btn::before {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-box,
+    .text,
+    .icon {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        color: black;
+    }
+
+    .text {
+        top: 0;
+    }
+
+    .text,
+    .icon {
+        transition: top 0.5s;
+    }
+
+    .icon {
+        color: white;
+        top: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .btn:hover {
+        background-color: #d19e06;
+    }
+
+    .btn:hover .text {
+        top: -100%;
+    }
+
+    .btn:hover .icon {
+        top: 0;
+    }
+
+    .btn:hover:before,
+    .btn:hover:after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .btn:hover:after {
+        bottom: 64px;
+    }
+
+    .btn:hover:before {
+        bottom: 84px;
+    }
+</style>
+
+
+
+
+

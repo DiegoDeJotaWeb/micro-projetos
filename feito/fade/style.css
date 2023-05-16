@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 483px;
+    height: 298px;
+    background: #000;
+    transition: all 0.3s;
+    color: #ffc312;
+}
+
+/* Fade In */
+.fade {
+    opacity: 0.5;
+}
+
+.fade:hover {
+    opacity: 1;
+}

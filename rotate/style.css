@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background: #000;
+    color: #ffc312;
+    transition: all 0.3s;
+}
+
+/* Rotacionar */
+
+.rotate:hover {
+    -webkit-transform: rotateZ(-90deg);
+    -ms-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+}

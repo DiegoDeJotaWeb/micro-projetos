@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 483px;
+    height: 298px;
+    background: #676470;
+    transition: all 0.3s;
+}
+
+/* Mudança de cor */
+.color:hover {
+    background: #C4141C;
+}

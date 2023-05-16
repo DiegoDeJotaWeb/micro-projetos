@@ -1,0 +1,77 @@
+<canvas id="canvas" width="1000" height="1000"></canvas>
+
+
+<script>
+
+    const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.ellipse(80, 75, 7, 7, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+ctx.beginPath();
+ctx.ellipse(115, 75, 7, 7, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+ctx.beginPath();
+ctx.ellipse(100, 100, 7, 7, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.ellipse(100, 100, 50, 50, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+ctx.beginPath();
+ctx.ellipse(100, 200, 65, 65, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+ctx.beginPath();
+ctx.ellipse(100, 300, 75, 75, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+//ctx.beginPath();
+//ctx.triangle(110,110,200,120,200,130, 2 * Math.PI);
+//ctx.stroke();
+
+ctx.beginPath()
+ctx.moveTo(500, 300)
+ctx.lineTo(0, 100)
+ctx.lineTo(0, 25)
+ctx.lineTo(100, 25)
+ctx.stroke()
+ctx.closePath()
+
+ctx.beginPath();
+ctx.ellipse(100, 180, 7, 7, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.ellipse(100, 200, 7, 7, 0, 0, 2 * Math.PI);
+
+ctx.stroke();
+
+
+
+//ctx.fill();
+/*ctx.ellipse(200,200,100,100);
+ctx.ellipse(200,130,75,75);
+ctx.triangle(110,110,200,120,200,130);
+
+ctx.ellipse(185,110,10,10);
+ctx.ellipse(210,110,10,10);
+
+ctx.ellipse(200,185,10,10);
+ctx.ellipse(200,200,10,10);
+ctx.ellipse(200,215,10,10);*/
+
+</script>

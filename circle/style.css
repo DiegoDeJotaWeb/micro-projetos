@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background: #000;
+    transition: all 0.3s;
+    color: #ffc312;
+    text-transform: uppercase
+    
+}
+
+/* Arredondar */
+
+.circle:hover {
+    border-radius: 50%;
+}

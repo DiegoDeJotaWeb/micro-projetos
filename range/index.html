@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="range" id="range">
+            <input type="text" id="saidaInput">
+            <div id="saidaTexto"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    range.oninput = passarValor;
+
+    function passarValor() {
+        saidaInput.value = this.value;
+        saidaTexto.innerText = this.value;
+    }
+</script>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        width: 50%;
+        text-align: center;
+    }
+
+    #range {
+        width: 100%;
+    }
+
+    #saidaInput {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    #saidaTexto {
+        color: #ffc412;
+        font-size: 40px;
+    }
+
+    input[type='range'] {
+        cursor: pointer;
+        width: 50%;
+    }
+
+    input[type='range'],
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+
+    /** 
+   * Use o pseudo-seletor "::-webkit-slider-runnable-track" para customizar o "trilho" do campo.
+   */
+    input[type='range']::-webkit-slider-runnable-track {
+        width: 200px;
+        height: 10px;
+        background: #ffc412;
+    }
+
+    /** 
+   * Use o pseudo-seletor "::-webkit-slider-thumb" para customizar o "seletor" do campo.
+   */
+    input[type='range']::-webkit-slider-thumb {
+        width: 20px;
+        height: 20px;
+        margin-top: -4.5px;
+        background-color: #f3d16a;
+        border-radius: 60px;
+    }
+</style>
+
+
+
+
+

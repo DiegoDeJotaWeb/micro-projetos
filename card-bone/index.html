@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-img">
+                <img src="image/bone-.png" alt="">
+                <div class="card-title">bone oakley</div>
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        width: 100%;
+        height: 400px;
+        max-width: 300px;
+        border-radius: 8px;
+        background: linear-gradient(to right, #ffc412, #ffc412, #ac8100);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-right-color: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom-color: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 30px rgba(255, 255, 255, 0.09);
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .card,
+    .card * {
+        box-sizing: border-box;
+        transition: 400ms;
+    }
+
+    .card-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .card-title {
+        text-align: center;
+        margin-top: 8px;
+        color: #000;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: Noto Sans, sans-serif;
+    }
+
+    .card-content {
+        position: absolute;
+        right: 32px;
+        bottom: 24px;
+        left: 32px;
+        text-align: center;
+        color: #000;
+        font-size: 1rem;
+        opacity: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .card:hover .card-img {
+        transform: translateY(-48px);
+    }
+
+    .card:hover .card-img img {
+        transform: translate(-16px, -42px) rotate(-16deg) scale(1.4);
+    }
+
+    .card:hover .card-content {
+        opacity: 1;
+    }
+</style>
+
+

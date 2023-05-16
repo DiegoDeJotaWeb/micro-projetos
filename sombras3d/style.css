@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 483px;
+    height: 298px;
+    background: #000;
+    color: #ffc312;
+    transition: all 0.3s;
+}
+
+ /* Sombras em 3D */
+ .threed:hover {
+    box-shadow:
+        1px 1px #ffc312,
+        2px 2px #ffc312,
+        3px 3px #ffc312,
+        4px 4px #ffc312,
+        5px 5px #ffc312;
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+}

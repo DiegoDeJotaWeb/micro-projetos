@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 483px;
+    height: 298px;
+    background: #676470;
+    transition: all 0.3s;
+}
+
+ /* Encolher (shrink) */
+
+ .shrink:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}

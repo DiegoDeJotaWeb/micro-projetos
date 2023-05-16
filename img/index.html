@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem</title>
+</head>
+<body>
+    <section class="box">
+        <img src="img/1.jpg" alt="" id="mainPhoto">    
+        <div class="image-box">
+            <img src="img/1.jpg" alt="" class="imgCarousel">
+            <img src="img/2.jpg" alt="" class="imgCarousel">
+            <img src="img/3.jpg" alt="" class="imgCarousel">
+            <img src="img/4.jpg" alt="" class="imgCarousel">
+            <img src="img/5.jpg" alt="" class="imgCarousel">
+        </div>
+    </section>    
+</body>
+</html>
+
+
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #mainPhoto{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .imgCarousel{
+        width: 100px;
+        height: 100px;
+        transition: 0.3s;
+    }
+
+    .imgCarousel:hover{
+        width: 110px;
+        height: 110px;
+        border: 2px solid white;
+        margin: 3px;
+    }
+
+    img{
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    let images = Array.from(document.getElementsByClassName("imgCarousel"));
+
+    let mainPhoto = document.getElementById("mainPhoto");
+
+    function updateImage(event){
+        let image = event.target;
+        mainPhoto.src = image.src;
+    };
+
+    images.forEach(function(image){
+        image.addEventListener("click", updateImage);
+    });
+</script>

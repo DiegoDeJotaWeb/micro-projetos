@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 483px;
+    height: 298px;
+    background: #000;
+    color: #ffc312;
+    transition: all 0.3s;
+}
+
+ /* Ampliar */
+
+ .ampliar:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
